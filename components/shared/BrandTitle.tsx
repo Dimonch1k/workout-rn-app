@@ -1,30 +1,24 @@
-import { StyleSheet, Text, TextStyle } from 'react-native'
+import { cn } from '@/utils/cn'
+import { Text } from 'react-native'
 
 interface BrandTitleProps {
 	centered?: boolean
-	style?: TextStyle | TextStyle[]
+	className?: string
 }
 
 export default function BrandTitle({
 	centered = true,
-	style,
+	className,
 }: BrandTitleProps) {
 	return (
-		<Text style={[styles.brandText, centered && styles.centered, style]}>
+		<Text
+			className={cn(
+				'text-white text-[32px] font-poppins-semibold leading-9 tracking-widest',
+				centered && 'text-center',
+				className
+			)}
+		>
 			BODY GOALS{'\n'}WORKOUT
 		</Text>
 	)
 }
-
-const styles = StyleSheet.create({
-	brandText: {
-		color: 'white',
-		fontSize: 32,
-		fontFamily: 'Poppins-SemiBold',
-		lineHeight: 34,
-		letterSpacing: 6,
-	},
-	centered: {
-		textAlign: 'center',
-	},
-})

@@ -1,276 +1,140 @@
 import BrandTitle from '@/components/shared/BrandTitle'
+import { Divider } from '@/components/shared/Divider'
+import { LinkText } from '@/components/shared/LinkText'
+import { AuthLayout } from '@/components/ui/AuthLayout'
+import { Button } from '@/components/ui/buttons/Button'
+import { Input } from '@/components/ui/Input'
+import { useAuthForm } from '@/hooks/useAuthForm'
+
+import { styles } from '@/styles/screens/SignInStyles'
 import { Ionicons } from '@expo/vector-icons'
+
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
-import { useState } from 'react'
-import {
-	Dimensions,
-	ImageBackground,
-	KeyboardAvoidingView,
-	Platform,
-	ScrollView,
-	StyleSheet,
-	Text,
-	TextInput,
-	TouchableOpacity,
-	View,
-} from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window')
+const socialProviders: {
+	provider: 'apple' | 'facebook' | 'google'
+	iconName: 'logo-apple' | 'logo-facebook' | 'logo-google'
+	color: string
+}[] = [
+	{ provider: 'apple', iconName: 'logo-apple', color: '#000' },
+	{ provider: 'facebook', iconName: 'logo-facebook', color: '#1877f2' },
+	{ provider: 'google', iconName: 'logo-google', color: '#ea4335' },
+]
 
 export default function SignUpScreen() {
 	const router = useRouter()
-	const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
-	const [confirmPassword, setConfirmPassword] = useState('')
+	const {
+		email,
+		setEmail,
+		password,
+		setPassword,
+		confirmPassword,
+		setConfirmPassword,
+		loading,
+		setLoading,
+		isFormValid,
+		resetForm,
+	} = useAuthForm()
 
 	const handleSignUp = () => {
-		router.replace('/(tabs)')
+		if (!isFormValid(true)) {
+			alert(
+				'Please fill in a valid email, password, and matching confirmation password'
+			)
+			return
+		}
+
+		setLoading(true)
+
+		setTimeout(() => {
+			setLoading(false)
+			resetForm()
+			router.replace('/(tabs)')
+		}, 1000)
 	}
 
-	const handleSignIn = () => {
-		router.push('/sign-in')
-	}
+	const handleSignIn = () => router.push('/sign-in')
 
 	const handleSocialSignUp = (provider: 'apple' | 'facebook' | 'google') => {
 		console.log(`Sign up with ${provider}`)
 	}
 
 	return (
-		<KeyboardAvoidingView
-			style={styles.container}
-			behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+		<AuthLayout
+			backgroundImage={require('../assets/images/sign-up.png')}
+			linearGradientChildren={
+				<LinearGradient
+					colors={['transparent', '#062029', '#062029'] as const}
+					locations={[0, 0.4, 1] as const}
+					style={styles.gradientOverlay}
+				/>
+			}
 		>
-			<ScrollView
-				style={styles.scrollView}
-				contentContainerStyle={styles.scrollContent}
-				showsVerticalScrollIndicator={false}
-			>
-				<ImageBackground
-					source={require('../assets/images/sign-up.png')}
-					style={styles.backgroundImage}
-					resizeMode='cover'
+			<BrandTitle className='mb-5' />
+
+			<View className='w-full flex flex-col gap-5'>
+				{/* Email */}
+				<Input
+					icon='mail-outline'
+					placeholder='Email'
+					value={email}
+					onChangeText={setEmail}
+					keyboardType='email-address'
+					autoCapitalize='none'
+				/>
+
+				{/* Password */}
+				<Input
+					icon='lock-closed-outline'
+					placeholder='Password'
+					value={password}
+					onChangeText={setPassword}
+					secureTextEntry
+				/>
+
+				{/* Confirm Password */}
+				<Input
+					icon='lock-closed-outline'
+					placeholder='Confirm Password'
+					value={confirmPassword}
+					onChangeText={setConfirmPassword}
+					secureTextEntry
+				/>
+
+				{/* Sign Up Button */}
+				<Button
+					variant='primary'
+					className='w-full p-4 rounded-[15px] shadow-sm shadow-black'
+					onPress={handleSignUp}
+					disabled={loading}
 				>
-					<LinearGradient
-						colors={['transparent', '#062029', '#062029']}
-						locations={[0, 0.4, 1]}
-						style={styles.gradientOverlay}
-					/>
+					{loading ? 'Signing up...' : 'Sign Up'}
+				</Button>
 
-					{/* Main Content */}
-					<View style={styles.contentContainer}>
-						<BrandTitle style={{ marginBottom: 20 }} />
+				<Divider />
 
-						{/* Form Container */}
-						<View style={styles.formContainer}>
-							<View style={styles.inputContainer}>
-								<Ionicons
-									name='mail-outline'
-									size={20}
-									color='#9ca3af'
-									style={styles.inputIcon}
-								/>
-								<TextInput
-									style={styles.textInput}
-									placeholder='Email'
-									placeholderTextColor='#9ca3af'
-									value={email}
-									onChangeText={setEmail}
-									keyboardType='email-address'
-									autoCapitalize='none'
-								/>
-							</View>
+				{/* Social Signup */}
+				<View className='flex flex-row justify-center gap-4 mb-6'>
+					{socialProviders.map(({ provider, iconName, color }) => (
+						<TouchableOpacity
+							key={provider}
+							onPress={() => handleSocialSignUp(provider)}
+							className='size-14 bg-white rounded-xl flex justify-center items-center'
+						>
+							<Ionicons name={iconName} size={24} color={color} />
+						</TouchableOpacity>
+					))}
+				</View>
 
-							<View style={styles.inputContainer}>
-								<Ionicons
-									name='lock-closed-outline'
-									size={20}
-									color='#9ca3af'
-									style={styles.inputIcon}
-								/>
-								<TextInput
-									style={styles.textInput}
-									placeholder='Password'
-									placeholderTextColor='#9ca3af'
-									value={password}
-									onChangeText={setPassword}
-									secureTextEntry
-								/>
-							</View>
-
-							<View style={styles.inputContainer}>
-								<Ionicons
-									name='lock-closed-outline'
-									size={20}
-									color='#9ca3af'
-									style={styles.inputIcon}
-								/>
-								<TextInput
-									style={styles.textInput}
-									placeholder='Confirmation password'
-									placeholderTextColor='#9ca3af'
-									value={confirmPassword}
-									onChangeText={setConfirmPassword}
-									secureTextEntry
-								/>
-							</View>
-
-							<TouchableOpacity
-								style={styles.signUpButton}
-								onPress={handleSignUp}
-								activeOpacity={0.8}
-							>
-								<Text style={styles.signUpButtonText}>Sign Up</Text>
-							</TouchableOpacity>
-
-							<View style={styles.dividerContainer}>
-								<View style={styles.dividerLine} />
-								<Text style={styles.dividerText}>Or</Text>
-								<View style={styles.dividerLine} />
-							</View>
-
-							<View style={styles.socialButtonsContainer}>
-								<TouchableOpacity
-									style={styles.socialButton}
-									onPress={() => handleSocialSignUp('apple')}
-								>
-									<Ionicons name='logo-apple' size={24} color='#000' />
-								</TouchableOpacity>
-
-								<TouchableOpacity
-									style={styles.socialButton}
-									onPress={() => handleSocialSignUp('facebook')}
-								>
-									<Ionicons name='logo-facebook' size={24} color='#1877f2' />
-								</TouchableOpacity>
-
-								<TouchableOpacity
-									style={styles.socialButton}
-									onPress={() => handleSocialSignUp('google')}
-								>
-									<Ionicons name='logo-google' size={24} color='#ea4335' />
-								</TouchableOpacity>
-							</View>
-
-							<View style={styles.signInContainer}>
-								<Text style={styles.signInText}>If you have an account? </Text>
-								<TouchableOpacity onPress={handleSignIn}>
-									<Text style={styles.signInLink}>Sign In here</Text>
-								</TouchableOpacity>
-							</View>
-						</View>
-					</View>
-				</ImageBackground>
-			</ScrollView>
-		</KeyboardAvoidingView>
+				{/* Sign In Link */}
+				<LinkText
+					normalText='Already have an account?'
+					linkText='Sign In here'
+					onPress={handleSignIn}
+				/>
+			</View>
+		</AuthLayout>
 	)
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#000',
-	},
-	scrollView: {
-		flex: 1,
-	},
-	scrollContent: {
-		minHeight: screenHeight,
-	},
-	backgroundImage: {
-		width: screenWidth,
-		flex: 1,
-	},
-	gradientOverlay: {
-		position: 'absolute',
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-	},
-	contentContainer: {
-		flex: 1,
-		justifyContent: 'flex-end',
-		alignItems: 'center',
-		paddingHorizontal: 40,
-		paddingBottom: 40,
-	},
-	formContainer: {
-		width: '100%',
-		flexDirection: 'column',
-		gap: 20,
-	},
-	inputContainer: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		backgroundColor: 'white',
-		borderRadius: 10,
-		padding: 15,
-	},
-	inputIcon: {
-		marginRight: 12,
-	},
-	textInput: {
-		width: '100%',
-		fontSize: 16,
-		fontFamily: 'Poppins-Regular',
-		color: '#bababa',
-		outlineWidth: 0,
-	},
-	signUpButton: {
-		backgroundColor: '#FFF50A',
-		borderRadius: 10,
-		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 15,
-	},
-	signUpButtonText: {
-		color: '#000',
-		fontSize: 18,
-		fontFamily: 'Poppins-Bold',
-	},
-	dividerContainer: {
-		flexDirection: 'row',
-		alignItems: 'center',
-	},
-	dividerLine: {
-		flex: 1,
-		height: 1,
-		backgroundColor: '#fff',
-	},
-	dividerText: {
-		color: 'white',
-		fontSize: 16,
-		fontFamily: 'Poppins-Regular',
-		marginHorizontal: 20,
-	},
-	socialButtonsContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		gap: 16,
-		marginBottom: 24,
-	},
-	socialButton: {
-		width: 56,
-		height: 56,
-		backgroundColor: 'white',
-		borderRadius: 12,
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	signInContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	signInText: {
-		color: 'white',
-		fontSize: 14,
-		fontFamily: 'Poppins-Regular',
-	},
-	signInLink: {
-		color: '#FFF50A',
-		fontSize: 14,
-		fontFamily: 'Poppins-Bold',
-	},
-})
