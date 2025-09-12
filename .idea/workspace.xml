@@ -5,29 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/sessions/category.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sessions/filter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sessions/volume-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/diet-plan/DietPlanList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/IsLiveBadge.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/LiveSessionsSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/TrainersSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/TutorialsSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/VideoFooter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/sessions/VideosSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/icons/CategoryIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/icons/FilterIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/icons/VolumeUpIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/sessions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/sessions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-up.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/home/CategorySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/CategorySection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/home/DiscoverSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/DiscoverSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/home/HeaderSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/HeaderSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/home/HomeSection.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/home/TrendingSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/TrendingSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/home/WorkoutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/WorkoutSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/home/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/home/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shared/BrandTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/BrandTitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shared/Divider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Divider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shared/LinkText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/LinkText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/shared/tabs/TabScreenHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/tabs/TabScreenHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/buttons/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/buttons/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/buttons/SocialButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/buttons/SocialButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/home.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/home.data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/diet-plan.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/diet-plan.data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/home.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/home.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;refactor/nativewind-reusable-components&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Desktop/Git/Dimonch1k/workout-rn-app&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23445463&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "feature/left-screens",
+    "last_opened_file_path": "/Users/admin/Desktop/Git/Dimonch1k/workout-rn-app",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "settings.editor.splitter.proportion": "0.23445463"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="" />

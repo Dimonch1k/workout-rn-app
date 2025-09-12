@@ -79,7 +79,7 @@ export default function SignInScreen() {
 					variant='ghost'
 					size='sm'
 					className='items-center mb-3 p-0'
-					textClassName='text-sm font-poppins-bold font-bold'
+					textClassName='text-sm font-poppins-bold'
 				>
 					Forgot Password
 				</Button>

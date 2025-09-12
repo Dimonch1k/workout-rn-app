@@ -6,7 +6,7 @@ export interface IHomeSectionItem {
 }
 
 export interface WorkoutSectionProps {
-	planList: IHomeSectionItem[]
+	workoutList: IHomeSectionItem[]
 }
 
 export interface CategorySectionProps {

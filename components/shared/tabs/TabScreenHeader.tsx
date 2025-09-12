@@ -47,7 +47,7 @@ export function TabScreenHeader({
 			{!hasBackArrow && children}
 
 			{title && (
-				<Text className='text-white text-lg font-bold leading-[120%]'>
+				<Text className='text-white text-lg font-poppins-bold leading-[120%]'>
 					{title}
 				</Text>
 			)}

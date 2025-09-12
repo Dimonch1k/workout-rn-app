@@ -16,14 +16,14 @@ export function CategorySection({
 				className='pl-[23px]'
 				contentContainerClassName='flex-row gap-2 pr-[23px]'
 			>
-				{categoryList.map((cat, index) => (
+				{categoryList.map((category, index) => (
 					<View key={index} className='relative items-center'>
 						<Image
-							source={cat.image}
-							className='w-[77px] h-[104px] rounded-2xl'
+							source={category.image}
+							className='w-[77px] h-[104px] rounded-[15px]'
 						/>
 						<Text className='absolute bottom-[15px] text-white text-xs font-poppins-bold'>
-							{cat.label}
+							{category.label}
 						</Text>
 					</View>
 				))}

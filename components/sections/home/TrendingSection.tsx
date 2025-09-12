@@ -20,7 +20,7 @@ export function TrendingSection({
 					<View key={index} className='relative items-start'>
 						<Image
 							source={trend.image}
-							className='w-[223px] h-[119px] rounded-2xl'
+							className='w-[223px] h-[119px] rounded-[15px]'
 						/>
 						<Text className='absolute bottom-[15px] left-[15px] text-white text-base font-poppins-bold'>
 							{trend.label}
