@@ -1,25 +1,22 @@
+import { TabSection } from '@/components/shared/tabs/TabSection'
+
+import type { CategorySectionProps } from '@/types/home.interface'
+
 import { Image, ScrollView, Text, View } from 'react-native'
 
-import { HomeSection } from './HomeSection'
-
-interface CategorySectionProps {
-	categories: { image: any; label: string }[]
-	onSeeAll?: () => void
-}
-
 export function CategorySection({
-	categories,
+	categoryList,
 	onSeeAll,
 }: CategorySectionProps) {
 	return (
-		<HomeSection title='Categories' onPressSeeAll={onSeeAll}>
+		<TabSection title='Categories' onPressSeeAll={onSeeAll}>
 			<ScrollView
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				className='pl-[23px]'
 				contentContainerClassName='flex-row gap-2 pr-[23px]'
 			>
-				{categories.map((cat, index) => (
+				{categoryList.map((cat, index) => (
 					<View key={index} className='relative items-center'>
 						<Image
 							source={cat.image}
@@ -31,6 +28,6 @@ export function CategorySection({
 					</View>
 				))}
 			</ScrollView>
-		</HomeSection>
+		</TabSection>
 	)
 }

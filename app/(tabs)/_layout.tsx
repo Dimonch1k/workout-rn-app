@@ -1,4 +1,5 @@
 import { tabScreens } from '@/data/tab-screens.data'
+
 import { Tabs } from 'expo-router'
 
 export default function TabLayout() {

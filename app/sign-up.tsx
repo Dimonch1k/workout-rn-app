@@ -1,6 +1,7 @@
 import BrandTitle from '@/components/shared/BrandTitle'
 import { Divider } from '@/components/shared/Divider'
 import { LinkText } from '@/components/shared/LinkText'
+
 import { AuthLayout } from '@/components/ui/AuthLayout'
 import { Button } from '@/components/ui/buttons/Button'
 import { Input } from '@/components/ui/Input'

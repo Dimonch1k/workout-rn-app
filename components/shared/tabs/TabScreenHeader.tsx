@@ -27,7 +27,6 @@ export function TabScreenHeader({
 	const router = useRouter()
 
 	const handleBackPress = () => {
-		// Navigate back to home tab
 		router.push('/(tabs)')
 	}
 

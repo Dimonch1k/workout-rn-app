@@ -1,22 +1,22 @@
+import { TabSection } from '@/components/shared/tabs/TabSection'
+
+import type { TrendingSectionProps } from '@/types/home.interface'
+
 import { Image, ScrollView, Text, View } from 'react-native'
 
-import { HomeSection } from './HomeSection'
-
-interface TrendingSectionProps {
-	items: { image: any; label: string }[]
-	onSeeAll?: () => void
-}
-
-export function TrendingSection({ items, onSeeAll }: TrendingSectionProps) {
+export function TrendingSection({
+	trendingList,
+	onSeeAll,
+}: TrendingSectionProps) {
 	return (
-		<HomeSection title='Trending' onPressSeeAll={onSeeAll}>
+		<TabSection title='Trending' onPressSeeAll={onSeeAll}>
 			<ScrollView
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				className='pl-[23px]'
 				contentContainerClassName='flex-row gap-4 pr-[23px]'
 			>
-				{items.map((trend, index) => (
+				{trendingList.map((trend, index) => (
 					<View key={index} className='relative items-start'>
 						<Image
 							source={trend.image}
@@ -28,6 +28,6 @@ export function TrendingSection({ items, onSeeAll }: TrendingSectionProps) {
 					</View>
 				))}
 			</ScrollView>
-		</HomeSection>
+		</TabSection>
 	)
 }

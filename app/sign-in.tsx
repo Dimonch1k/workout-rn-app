@@ -1,8 +1,10 @@
 import BrandTitle from '@/components/shared/BrandTitle'
 import { LinkText } from '@/components/shared/LinkText'
+
 import { AuthLayout } from '@/components/ui/AuthLayout'
 import { Button } from '@/components/ui/buttons/Button'
 import { Input } from '@/components/ui/Input'
+
 import { useAuthForm } from '@/hooks/useAuthForm'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -32,8 +34,7 @@ export default function SignInScreen() {
 		setTimeout(() => {
 			setLoading(false)
 			resetForm()
-			router.dismissAll()
-			router.push('/(tabs)')
+			router.replace('/(tabs)')
 		}, 1000)
 	}
 
@@ -46,13 +47,7 @@ export default function SignInScreen() {
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029'] as const}
 					locations={[0, 0.5, 1] as const}
-					style={{
-						position: 'absolute',
-						top: 0,
-						left: 0,
-						right: 0,
-						bottom: 0,
-					}}
+					className='absolute top-0 left-0 right-0 bottom-0'
 				/>
 			}
 			className='pb-10'

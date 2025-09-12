@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn'
+
 import { Text } from 'react-native'
 
 interface BrandTitleProps {

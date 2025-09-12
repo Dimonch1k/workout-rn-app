@@ -1,21 +1,19 @@
+import { TabSection } from '@/components/shared/tabs/TabSection'
+
+import type { DiscoverSectionProps } from '@/types/home.interface'
+
 import { Image, ScrollView } from 'react-native'
 
-import { HomeSection } from './HomeSection'
-
-interface DiscoverSectionProps {
-	items: { image: any }[]
-}
-
-export function DiscoverSection({ items }: DiscoverSectionProps) {
+export function DiscoverSection({ discoverList }: DiscoverSectionProps) {
 	return (
-		<HomeSection title='Discover'>
+		<TabSection title='Discover'>
 			<ScrollView
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				className='pl-[23px]'
 				contentContainerClassName='flex-row gap-4 pr-[23px]'
 			>
-				{items.map((d, index) => (
+				{discoverList.map((d, index) => (
 					<Image
 						key={index}
 						source={d.image}
@@ -23,6 +21,6 @@ export function DiscoverSection({ items }: DiscoverSectionProps) {
 					/>
 				))}
 			</ScrollView>
-		</HomeSection>
+		</TabSection>
 	)
 }

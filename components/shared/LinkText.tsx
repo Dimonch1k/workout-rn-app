@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn'
+
 import { Text, TextProps, TouchableOpacity, View } from 'react-native'
 
 interface LinkTextProps {

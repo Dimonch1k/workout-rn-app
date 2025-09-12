@@ -22,10 +22,10 @@ export default function DashboardHomeScreen() {
 			<StatusBar barStyle='light-content' backgroundColor='#062029' />
 			<ScrollView className='flex-1' showsVerticalScrollIndicator={false}>
 				<HeaderSection />
-				<WorkoutSection plans={workoutPlanDataList} />
-				<CategorySection categories={categoryDataList} onSeeAll={() => {}} />
-				<TrendingSection items={trendingDataList} onSeeAll={() => {}} />
-				<DiscoverSection items={discoverDataList} />
+				<WorkoutSection planList={workoutPlanDataList} />
+				<CategorySection categoryList={categoryDataList} onSeeAll={() => {}} />
+				<TrendingSection trendingList={trendingDataList} onSeeAll={() => {}} />
+				<DiscoverSection discoverList={discoverDataList} />
 			</ScrollView>
 		</TabScreen>
 	)
