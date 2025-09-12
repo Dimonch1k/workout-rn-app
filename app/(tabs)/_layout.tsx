@@ -1,21 +1,14 @@
 import { tabScreens } from '@/data/tab-screens.data'
+
 import { Tabs } from 'expo-router'
 
 export default function TabLayout() {
 	return (
 		<Tabs
 			screenOptions={{
-				tabBarActiveTintColor: '#FFF50A',
-				tabBarInactiveTintColor: 'white',
+				tabBarActiveTintColor: '#fff50a',
+				tabBarInactiveTintColor: '#fff',
 				headerShown: false,
-				tabBarStyle: {
-					backgroundColor: '#0f172a',
-					height: 80,
-					paddingTop: 10,
-					borderTopWidth: 0,
-					elevation: 0,
-					shadowOpacity: 0,
-				},
 				tabBarLabelStyle: {
 					fontSize: 12,
 					fontFamily: 'Poppins-Bold',
@@ -28,9 +21,22 @@ export default function TabLayout() {
 					key={name}
 					name={name}
 					options={{
-						headerShown: false,
 						title,
 						tabBarIcon: ({ color }) => <Icon color={color} />,
+						tabBarStyle: {
+							backgroundColor: '#062029',
+							height: 80,
+							paddingTop: 10,
+							paddingBottom: 10,
+							borderTopWidth: 0,
+							elevation: 0,
+							shadowOpacity: 0,
+						},
+						...(name !== 'index' && {
+							tabBarStyle: {
+								display: 'none',
+							},
+						}),
 					}}
 				/>
 			))}

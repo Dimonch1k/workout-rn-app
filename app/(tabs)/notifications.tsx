@@ -1,33 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { NotificationListSection } from '@/components/sections/notifications/NotificationListSection'
+import { TabScreen } from '@/components/shared/tabs/TabScreen'
+import { TabScreenHeader } from '@/components/shared/tabs/TabScreenHeader'
+import { notificationDataList } from '@/data/notifications.data'
+import { ScrollView } from 'react-native'
 
 export default function NotificationsScreen() {
+	const todayNotificationList = notificationDataList.slice(0, 4)
+	const thisWeekNotificationList = notificationDataList.slice(4)
+
 	return (
-		<View style={styles.container}>
-			<Text style={styles.title}>Notifications</Text>
-			<Text style={styles.subtitle}>Coming Soon...</Text>
-		</View>
+		<TabScreen>
+			<TabScreenHeader hasBackArrow hasEndBlock title='Notifications' />
+
+			<ScrollView
+				showsVerticalScrollIndicator={false}
+				contentContainerClassName='flex-col gap-2 px-[23px]'
+			>
+				<NotificationListSection
+					notificationList={todayNotificationList}
+					sectionTitle='Today'
+				/>
+				<NotificationListSection
+					notificationList={thisWeekNotificationList}
+					sectionTitle='This Week'
+				/>
+			</ScrollView>
+		</TabScreen>
 	)
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#0f172a', // slate-900
-		justifyContent: 'center',
-		alignItems: 'center',
-		paddingHorizontal: 20,
-	},
-	title: {
-		color: 'white',
-		fontSize: 28,
-		fontFamily: 'Poppins-Bold',
-		textAlign: 'center',
-		marginBottom: 16,
-	},
-	subtitle: {
-		color: '#9ca3af',
-		fontSize: 16,
-		fontFamily: 'Poppins-Regular',
-		textAlign: 'center',
-	},
-})

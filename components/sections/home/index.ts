@@ -1,0 +1,5 @@
+export { CategorySection } from './CategorySection'
+export { DiscoverSection } from './DiscoverSection'
+export { HeaderSection } from './HeaderSection'
+export { TrendingSection } from './TrendingSection'
+export { WorkoutSection } from './WorkoutSection'

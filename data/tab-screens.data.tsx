@@ -3,7 +3,19 @@ import { HomeIcon } from '@/components/ui/icons/HomeIcon'
 import { NotificationIcon } from '@/components/ui/icons/NotificationIcon'
 import { SessionsIcon } from '@/components/ui/icons/SessionsIcon'
 
-export const tabScreens = [
+import { FC } from 'react'
+
+interface IconProps {
+	color?: string
+}
+
+interface TabScreenProps {
+	name: 'index' | 'sessions' | 'diet-plan' | 'notifications'
+	title: string
+	Icon: FC<IconProps>
+}
+
+export const tabScreens: TabScreenProps[] = [
 	{
 		name: 'index',
 		title: 'Home',
