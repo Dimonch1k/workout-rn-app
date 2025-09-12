@@ -7,7 +7,13 @@ import wafflesImage from '@/assets/images/diet-plan/waffles.png'
 
 import type { IDietPlanSectionItem } from '@/types/diet-plan.interface'
 
-export const trainerDataList: IDietPlanSectionItem[] = [
+export const dietPlanDataList: IDietPlanSectionItem[] = [
+	{ image: outmealImage, label: 'Outmeal' },
+	{ image: wafflesImage, label: 'Waffles' },
+	{ image: cornflakesImage, label: 'Cornflakes' },
+	{ image: fruitsSaladImage, label: 'Fruits Salad' },
+	{ image: pancakesImage, label: 'Pancakes' },
+	{ image: breadAndTeaImage, label: 'Bread and Tea' },
 	{ image: outmealImage, label: 'Outmeal' },
 	{ image: wafflesImage, label: 'Waffles' },
 	{ image: cornflakesImage, label: 'Cornflakes' },

@@ -4,7 +4,7 @@ import type { WorkoutSectionProps } from '@/types/home.interface'
 
 import { Image, ScrollView, Text, View } from 'react-native'
 
-export function WorkoutSection({ planList }: WorkoutSectionProps) {
+export function WorkoutSection({ workoutList }: WorkoutSectionProps) {
 	return (
 		<TabSection title='Today Workout Plan' timeSlot='6am-8am'>
 			<ScrollView
@@ -13,11 +13,11 @@ export function WorkoutSection({ planList }: WorkoutSectionProps) {
 				className='pl-[23px]'
 				contentContainerClassName='flex-row gap-[22px] pr-[23px]'
 			>
-				{planList.map((item, index) => (
+				{workoutList.map((item, index) => (
 					<View key={index} className='relative items-center'>
 						<Image
 							source={item.image}
-							className='w-[148px] h-[169px] rounded-2xl'
+							className='w-[148px] h-[169px] rounded-[15px]'
 						/>
 						{item.label && (
 							<Text className='absolute bottom-[15px] text-white text-base font-poppins-bold'>
