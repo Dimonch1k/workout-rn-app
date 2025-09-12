@@ -1,52 +1,75 @@
 import { cn } from '@/utils/cn'
-
 import { Ionicons } from '@expo/vector-icons'
-import { TextInput, TextInputProps, View } from 'react-native'
+import { useState } from 'react'
+import { Text, TextInput, TextInputProps, View } from 'react-native'
 
 type IoniconsName = keyof typeof Ionicons.glyphMap
 
 interface InputProps extends TextInputProps {
-	icon?: IoniconsName
-	iconColor?: string
-	iconSize?: number
-	containerClassName?: string
-	inputClassName?: string
+  icon?: IoniconsName
+  iconColor?: string
+  iconSize?: number
+  containerClassName?: string
+  inputClassName?: string
+  customPlaceholder?: string
+  placeholderClassName?: string
 }
 
 export function Input({
-	icon,
-	iconColor = '#9ca3af',
-	iconSize = 20,
-	containerClassName,
-	inputClassName,
-	...textInputProps
+  icon,
+  iconColor = '#9ca3af',
+  iconSize = 20,
+  containerClassName,
+  inputClassName,
+  customPlaceholder,
+  placeholderClassName,
+  ...textInputProps
 }: InputProps) {
-	return (
-		<View
-			className={cn(
-				'flex-row items-center bg-white rounded-[10px] p-4',
-				containerClassName
-			)}
-		>
-			{icon && (
-				<Ionicons
-					name={icon}
-					size={iconSize}
-					color={iconColor}
-					className='mr-3'
-				/>
-			)}
-			<TextInput
-				className={cn(
-					'w-full text-base font-poppins-regular text-[#bababa] outline-none',
-					inputClassName
-				)}
-				placeholderTextColor={textInputProps.placeholderTextColor || '#9ca3af'}
-				{...textInputProps}
-				style={{
-					outlineWidth: 0,
-				}}
-			/>
-		</View>
-	)
+  const [value, setValue] = useState(textInputProps.value ?? '')
+
+  return (
+    <View
+      className={cn(
+        'flex flex-row items-center bg-white rounded-[10px] px-[15px] py-[8px]',
+        containerClassName
+      )}
+    >
+      {icon && (
+        <Ionicons
+          name={icon}
+          size={iconSize}
+          color={iconColor}
+          className="mr-3"
+        />
+      )}
+
+      <View className="flex-1 justify-center">
+        {customPlaceholder && !value && (
+          <Text
+            className={cn(
+              'absolute left-1 text-sm text-[#9ca3af]',
+              placeholderClassName
+            )}
+          >
+            {customPlaceholder}
+          </Text>
+        )}
+
+        <TextInput
+          {...textInputProps}
+          value={value}
+          onChangeText={(text) => {
+            setValue(text)
+            textInputProps.onChangeText?.(text)
+          }}
+          className={cn(
+            'text-sm font-poppins-regular text-black',
+            inputClassName
+          )}
+          placeholder={undefined}
+          style={{ outlineWidth: 0 }}
+        />
+      </View>
+    </View>
+  )
 }

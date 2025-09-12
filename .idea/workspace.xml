@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/sessions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/sessions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/onboarding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/onboarding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-in.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-up.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/AuthLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/buttons/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/buttons/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/icons/DietPlanIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/icons/DietPlanIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/icons/HomeIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/icons/HomeIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/icons/NotificationIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/icons/NotificationIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/icons/SessionsIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/icons/SessionsIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tab-screens.data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/tab-screens.data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/SignInStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/screens/SignUpStyles.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="32ZG0jnsDE3FP7Iv54pFsvE0DuF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor/nativewind-reusable-components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Desktop/Git/Dimonch1k/workout-rn-app&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23445463&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="" />
+      <created>1757620460119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757620460119</updated>
+    </task>
+    <servers />
+  </component>
+</project>

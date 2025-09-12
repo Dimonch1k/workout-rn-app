@@ -61,7 +61,7 @@ export function Button({
 				'flex rounded-[10px] justify-center items-center',
 				buttonVariants[variant],
 				buttonSizes[size],
-				disabled && 'opacity-50',
+				disabled && 'opacity-90',
 				className
 			)}
 			disabled={disabled || loading}

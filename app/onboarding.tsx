@@ -40,7 +40,7 @@ export default function OnboardingScreen() {
 				{/* Get Started Button */}
 				<Button
 					variant='primary'
-					className='w-full p-4 rounded-[15px] shadow-sm shadow-black'
+					className='w-[60vw] p-4 rounded-[15px] shadow-sm shadow-black'
 					onPress={handleGetStarted}
 					textClassName='text-[22px]'
 				>

@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/buttons/Button'
 import { Input } from '@/components/ui/Input'
 import { useAuthForm } from '@/hooks/useAuthForm'
 
-import { styles } from '@/styles/screens/SignInStyles'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
 import { View } from 'react-native'
@@ -33,7 +32,8 @@ export default function SignInScreen() {
 		setTimeout(() => {
 			setLoading(false)
 			resetForm()
-			router.replace('/(tabs)')
+			router.dismissAll()
+			router.push('/(tabs)')
 		}, 1000)
 	}
 
@@ -46,9 +46,16 @@ export default function SignInScreen() {
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029'] as const}
 					locations={[0, 0.5, 1] as const}
-					style={styles.gradientOverlay}
+					style={{
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						right: 0,
+						bottom: 0,
+					}}
 				/>
 			}
+			className='pb-10'
 		>
 			<BrandTitle className='mb-5' />
 
@@ -56,7 +63,7 @@ export default function SignInScreen() {
 				{/* Email */}
 				<Input
 					icon='mail-outline'
-					placeholder='Email'
+					customPlaceholder='Email'
 					value={email}
 					onChangeText={setEmail}
 					keyboardType='email-address'
@@ -66,7 +73,7 @@ export default function SignInScreen() {
 				{/* Password */}
 				<Input
 					icon='lock-closed-outline'
-					placeholder='Password'
+					customPlaceholder='Password'
 					value={password}
 					onChangeText={setPassword}
 					secureTextEntry
@@ -77,7 +84,7 @@ export default function SignInScreen() {
 					variant='ghost'
 					size='sm'
 					className='items-center mb-3 p-0'
-					textClassName='font-poppins-bold font-bold'
+					textClassName='text-sm font-poppins-bold font-bold'
 				>
 					Forgot Password
 				</Button>
@@ -85,7 +92,7 @@ export default function SignInScreen() {
 				{/* Sign In Button */}
 				<Button
 					variant='primary'
-					className='w-full p-4 rounded-[15px] shadow-sm shadow-black'
+					className='w-full p-4 shadow-sm shadow-black'
 					onPress={handleSignIn}
 					disabled={loading}
 				>

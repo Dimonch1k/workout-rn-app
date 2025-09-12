@@ -4,11 +4,10 @@ import { LinkText } from '@/components/shared/LinkText'
 import { AuthLayout } from '@/components/ui/AuthLayout'
 import { Button } from '@/components/ui/buttons/Button'
 import { Input } from '@/components/ui/Input'
+
 import { useAuthForm } from '@/hooks/useAuthForm'
 
-import { styles } from '@/styles/screens/SignInStyles'
 import { Ionicons } from '@expo/vector-icons'
-
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
 import { TouchableOpacity, View } from 'react-native'
@@ -68,7 +67,7 @@ export default function SignUpScreen() {
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029'] as const}
 					locations={[0, 0.4, 1] as const}
-					style={styles.gradientOverlay}
+					className='absolute top-0 left-0 right-0 bottom-0'
 				/>
 			}
 		>
@@ -78,7 +77,7 @@ export default function SignUpScreen() {
 				{/* Email */}
 				<Input
 					icon='mail-outline'
-					placeholder='Email'
+					customPlaceholder='Email'
 					value={email}
 					onChangeText={setEmail}
 					keyboardType='email-address'
@@ -88,7 +87,7 @@ export default function SignUpScreen() {
 				{/* Password */}
 				<Input
 					icon='lock-closed-outline'
-					placeholder='Password'
+					customPlaceholder='Password'
 					value={password}
 					onChangeText={setPassword}
 					secureTextEntry
@@ -97,7 +96,7 @@ export default function SignUpScreen() {
 				{/* Confirm Password */}
 				<Input
 					icon='lock-closed-outline'
-					placeholder='Confirm Password'
+					customPlaceholder='Confirm Password'
 					value={confirmPassword}
 					onChangeText={setConfirmPassword}
 					secureTextEntry
@@ -122,6 +121,7 @@ export default function SignUpScreen() {
 							key={provider}
 							onPress={() => handleSocialSignUp(provider)}
 							className='size-14 bg-white rounded-xl flex justify-center items-center'
+							activeOpacity={0.8}
 						>
 							<Ionicons name={iconName} size={24} color={color} />
 						</TouchableOpacity>
