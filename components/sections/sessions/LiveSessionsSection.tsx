@@ -3,6 +3,7 @@ import { TabSection } from '@/components/shared/tabs/TabSection'
 import type { LiveSessionsSectionProps } from '@/types/sessions.interface'
 
 import { Image, ScrollView, View } from 'react-native'
+
 import { IsLiveBadge } from './IsLiveBadge'
 import { VideoFooter } from './VideoFooter'
 

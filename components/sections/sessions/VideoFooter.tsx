@@ -1,6 +1,7 @@
 import { CategoryIcon } from '@/components/ui/icons/CategoryIcon'
 import { FilterIcon } from '@/components/ui/icons/FilterIcon'
 import { VolumeUpIcon } from '@/components/ui/icons/VolumeUpIcon'
+
 import { cn } from '@/utils/cn'
 
 import { Text, View } from 'react-native'
@@ -29,9 +30,6 @@ export function VideoFooter({ nowTime, endTime }: VideoFooterProps) {
 				<VolumeUpIcon />
 				<CategoryIcon />
 				<FilterIcon />
-				{/* <Image source={volumeUpImage} className='w-[14px] h-[14px]' />
-				<Image source={categoryImage} className='w-[14px] h-[14px]' />
-				<Image source={filterImage} className='w-[14px] h-[14px]' /> */}
 			</View>
 		</View>
 	)
