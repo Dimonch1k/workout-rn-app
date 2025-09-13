@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deviceManager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/diet-plan/DietPlanSelector.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shared/tabs/TabSectionBadge.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/diet-plan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/onboarding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/onboarding.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-in.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/sign-up.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/diet-plan/DietPlanList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/diet-plan/DietPlanList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/notifications/NotificationListSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/notifications/NotificationListSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/shared/BrandTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/BrandTitle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/shared/tabs/TabScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/tabs/TabScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/shared/tabs/TabScreenHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/tabs/TabScreenHeader.tsx" afterDir="false" />
@@ -21,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/data/diet-plan.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/diet-plan.data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/diet-plan.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/diet-plan.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/notifications.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/notifications.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/left-screens&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Desktop/Git/Dimonch1k/workout-rn-app&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23445463&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "bugfix/bg-image__input__create-diet-plan-selector__test-on-ios/android-devices",
+    "last_opened_file_path": "/Users/admin/Desktop/Git/Dimonch1k/workout-rn-app",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "settings.editor.splitter.proportion": "0.23445463"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="175b04b3-7600-449c-876a-bf3528781365" name="Changes" comment="" />

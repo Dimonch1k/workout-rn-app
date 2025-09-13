@@ -2,6 +2,7 @@ import { cn } from '@/utils/cn'
 
 import { ReactNode } from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
+
 import { TabSectionBadge } from './TabSectionBadge'
 
 interface TabSectionProps {
