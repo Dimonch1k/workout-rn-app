@@ -34,7 +34,7 @@ export function TabScreenHeader({
 		<View
 			className={cn(
 				'w-full flex flex-row justify-between items-center bg-secondary',
-				'px-[23px] pt-20 mb-[30px]',
+				'px-[23px] mb-[30px]',
 				className
 			)}
 		>

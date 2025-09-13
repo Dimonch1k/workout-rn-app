@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/buttons/Button'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
-import { Text, View } from 'react-native'
+import { Dimensions, Text, View } from 'react-native'
+
+const screenHeight = Dimensions.get('window').height
 
 export default function OnboardingScreen() {
 	const router = useRouter()
@@ -20,8 +22,14 @@ export default function OnboardingScreen() {
 			linearGradientChildren={
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029']}
-					locations={[0, 0.8, 1]}
-					className='absolute top-0 left-0 right-0 bottom-0'
+					locations={[0, 0.6, 1]}
+					style={{
+						position: 'absolute',
+						left: 0,
+						right: 0,
+						bottom: 0,
+						height: screenHeight * 0.56,
+					}}
 				/>
 			}
 		>

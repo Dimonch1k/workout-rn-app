@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn'
 
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react'
-import { Text, TextInput, TextInputProps, View } from 'react-native'
+import { TextInput, TextInputProps, View } from 'react-native'
 
 type IoniconsName = keyof typeof Ionicons.glyphMap
 
@@ -12,7 +12,6 @@ interface InputProps extends TextInputProps {
 	iconSize?: number
 	containerClassName?: string
 	inputClassName?: string
-	customPlaceholder?: string
 	placeholderClassName?: string
 }
 
@@ -22,7 +21,6 @@ export function Input({
 	iconSize = 20,
 	containerClassName,
 	inputClassName,
-	customPlaceholder,
 	placeholderClassName,
 	...textInputProps
 }: InputProps) {
@@ -31,7 +29,8 @@ export function Input({
 	return (
 		<View
 			className={cn(
-				'flex flex-row items-center bg-white rounded-[10px] px-[15px] py-[8px]',
+				'flex flex-row items-center bg-white rounded-[10px] p-[15px]',
+				'border border-[#bababa]',
 				containerClassName
 			)}
 		>
@@ -45,17 +44,6 @@ export function Input({
 			)}
 
 			<View className='flex-1 justify-center'>
-				{customPlaceholder && !value && (
-					<Text
-						className={cn(
-							'absolute left-1 text-sm text-[#9ca3af]',
-							placeholderClassName
-						)}
-					>
-						{customPlaceholder}
-					</Text>
-				)}
-
 				<TextInput
 					{...textInputProps}
 					value={value}
@@ -65,10 +53,11 @@ export function Input({
 					}}
 					className={cn(
 						'text-sm font-poppins-regular text-black',
+						'py-0',
 						inputClassName
 					)}
-					placeholder={undefined}
-					style={{ outlineWidth: 0 }}
+					style={{ height: 20, lineHeight: 20, outlineWidth: 0 }}
+					underlineColorAndroid='transparent'
 				/>
 			</View>
 		</View>

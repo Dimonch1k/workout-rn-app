@@ -37,7 +37,9 @@ export function AuthLayout({
 				resizeMode='cover'
 				style={{
 					width: screenWidth,
+					height: '100%',
 					flex: 1,
+					justifyContent: 'flex-start',
 				}}
 			>
 				{linearGradientChildren}

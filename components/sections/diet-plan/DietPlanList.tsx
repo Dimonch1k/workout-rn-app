@@ -1,27 +1,30 @@
 import type { DietPlanSectionProps } from '@/types/diet-plan.interface'
 
-import { Image, ScrollView, Text, View } from 'react-native'
+import { FlatList, Image, Text, View } from 'react-native'
 
 export function DietPlanList({ mealList }: DietPlanSectionProps) {
 	return (
-		<ScrollView
-			horizontal={false}
+		<FlatList
+			data={mealList}
+			keyExtractor={item => item.id}
+			numColumns={2}
+			columnWrapperStyle={{ columnGap: 32 }}
 			showsVerticalScrollIndicator={false}
 			className='px-[23px]'
-			contentContainerClassName='w-full flex flex-row flex-wrap gap-x-[33px] gap-y-6'
-		>
-			{mealList.map((meal, index) => (
-				<View key={index} className='w-fit relative items-center'>
+			contentContainerClassName='gap-y-6 pb-20'
+			renderItem={({ item }) => (
+				<View className='relative flex-1 items-center'>
 					<Image
-						source={meal.image}
-						className='w-[166px] h-[225px] rounded-[15px]'
+						source={item.image}
+						className='w-full rounded-[15px] object-contain'
+						resizeMode='contain'
 					/>
 
 					<Text className='absolute bottom-[15px] text-white text-lg font-poppins-bold'>
-						{meal.label}
+						{item.label}
 					</Text>
 				</View>
-			))}
-		</ScrollView>
+			)}
+		/>
 	)
 }

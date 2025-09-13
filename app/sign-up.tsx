@@ -11,7 +11,7 @@ import { useAuthForm } from '@/hooks/useAuthForm'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
-import { TouchableOpacity, View } from 'react-native'
+import { Dimensions, TouchableOpacity, View } from 'react-native'
 
 const socialProviders: {
 	provider: 'apple' | 'facebook' | 'google'
@@ -22,6 +22,8 @@ const socialProviders: {
 	{ provider: 'facebook', iconName: 'logo-facebook', color: '#1877f2' },
 	{ provider: 'google', iconName: 'logo-google', color: '#ea4335' },
 ]
+
+const screenHeight = Dimensions.get('window').height
 
 export default function SignUpScreen() {
 	const router = useRouter()
@@ -68,7 +70,13 @@ export default function SignUpScreen() {
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029'] as const}
 					locations={[0, 0.4, 1] as const}
-					className='absolute top-0 left-0 right-0 bottom-0'
+					style={{
+						position: 'absolute',
+						left: 0,
+						right: 0,
+						bottom: 0,
+						height: screenHeight * 0.9,
+					}}
 				/>
 			}
 		>
@@ -78,7 +86,7 @@ export default function SignUpScreen() {
 				{/* Email */}
 				<Input
 					icon='mail-outline'
-					customPlaceholder='Email'
+					placeholder='Email'
 					value={email}
 					onChangeText={setEmail}
 					keyboardType='email-address'
@@ -88,7 +96,7 @@ export default function SignUpScreen() {
 				{/* Password */}
 				<Input
 					icon='lock-closed-outline'
-					customPlaceholder='Password'
+					placeholder='Password'
 					value={password}
 					onChangeText={setPassword}
 					secureTextEntry
@@ -97,7 +105,7 @@ export default function SignUpScreen() {
 				{/* Confirm Password */}
 				<Input
 					icon='lock-closed-outline'
-					customPlaceholder='Confirm Password'
+					placeholder='Confirm Password'
 					value={confirmPassword}
 					onChangeText={setConfirmPassword}
 					secureTextEntry

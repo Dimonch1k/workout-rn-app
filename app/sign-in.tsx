@@ -9,7 +9,9 @@ import { useAuthForm } from '@/hooks/useAuthForm'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
-import { View } from 'react-native'
+import { Dimensions, View } from 'react-native'
+
+const screenHeight = Dimensions.get('window').height
 
 export default function SignInScreen() {
 	const router = useRouter()
@@ -46,11 +48,16 @@ export default function SignInScreen() {
 			linearGradientChildren={
 				<LinearGradient
 					colors={['transparent', '#062029', '#062029'] as const}
-					locations={[0, 0.5, 1] as const}
-					className='absolute top-0 left-0 right-0 bottom-0'
+					locations={[0, 0.58, 1] as const}
+					style={{
+						position: 'absolute',
+						left: 0,
+						right: 0,
+						bottom: 0,
+						height: screenHeight * 0.9,
+					}}
 				/>
 			}
-			className='pb-10'
 		>
 			<BrandTitle className='mb-5' />
 
@@ -58,7 +65,7 @@ export default function SignInScreen() {
 				{/* Email */}
 				<Input
 					icon='mail-outline'
-					customPlaceholder='Email'
+					placeholder='Email'
 					value={email}
 					onChangeText={setEmail}
 					keyboardType='email-address'
@@ -68,7 +75,7 @@ export default function SignInScreen() {
 				{/* Password */}
 				<Input
 					icon='lock-closed-outline'
-					customPlaceholder='Password'
+					placeholder='Password'
 					value={password}
 					onChangeText={setPassword}
 					secureTextEntry
@@ -87,7 +94,7 @@ export default function SignInScreen() {
 				{/* Sign In Button */}
 				<Button
 					variant='primary'
-					className='w-full p-4 shadow-sm shadow-black'
+					className='w-full p-4'
 					onPress={handleSignIn}
 					disabled={loading}
 				>
