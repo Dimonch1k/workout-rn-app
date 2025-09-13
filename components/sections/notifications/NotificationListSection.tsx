@@ -7,9 +7,10 @@ import { NotificationListSectionItem } from './NotificationListSectionItem'
 export function NotificationListSection({
 	notificationList,
 	sectionTitle,
+	badgeText,
 }: NotificationListSectionProps) {
 	return (
-		<TabSection title={sectionTitle} className='px-0'>
+		<TabSection title={sectionTitle} badgeText={badgeText} className='px-0'>
 			{notificationList.map((notification, idx) => (
 				<NotificationListSectionItem
 					key={idx}

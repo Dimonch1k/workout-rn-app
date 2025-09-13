@@ -1,7 +1,7 @@
 import { cn } from '@/utils/cn'
 
 import { ReactNode } from 'react'
-import { View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 interface TabScreenProps {
 	className?: string
@@ -10,6 +10,12 @@ interface TabScreenProps {
 
 export function TabScreen({ className, children }: TabScreenProps) {
 	return (
-		<View className={cn('flex-1 bg-secondary', className)}>{children}</View>
+		<SafeAreaView
+			style={{ flex: 1 }}
+			edges={['top']}
+			className={cn('bg-secondary', className)}
+		>
+			{children}
+		</SafeAreaView>
 	)
 }

@@ -19,7 +19,7 @@ import { ScrollView, StatusBar } from 'react-native'
 export default function DashboardHomeScreen() {
 	return (
 		<TabScreen>
-			<StatusBar barStyle='light-content' backgroundColor='#062029' />
+			<StatusBar barStyle='light-content' />
 			<ScrollView className='flex-1' showsVerticalScrollIndicator={false}>
 				<HeaderSection />
 				<WorkoutSection workoutList={workoutPlanDataList} />

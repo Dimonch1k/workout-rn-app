@@ -19,6 +19,7 @@ export default function NotificationsScreen() {
 				<NotificationListSection
 					notificationList={todayNotificationList}
 					sectionTitle='Today'
+					badgeText='+4'
 				/>
 				<NotificationListSection
 					notificationList={thisWeekNotificationList}

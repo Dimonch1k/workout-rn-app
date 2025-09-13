@@ -14,7 +14,7 @@ export default function BrandTitle({
 	return (
 		<Text
 			className={cn(
-				'text-white text-[32px] font-poppins-semibold leading-9 tracking-widest',
+				'text-white text-[32px] font-poppins-semibold leading-10 tracking-widest',
 				centered && 'text-center',
 				className
 			)}

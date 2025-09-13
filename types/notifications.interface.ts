@@ -10,4 +10,5 @@ export interface INotificationListSectionItem {
 export interface NotificationListSectionProps {
 	notificationList: INotificationListSectionItem[]
 	sectionTitle: string
+	badgeText?: string
 }

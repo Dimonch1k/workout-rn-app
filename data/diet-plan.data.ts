@@ -8,16 +8,16 @@ import wafflesImage from '@/assets/images/diet-plan/waffles.png'
 import type { IDietPlanSectionItem } from '@/types/diet-plan.interface'
 
 export const dietPlanDataList: IDietPlanSectionItem[] = [
-	{ image: outmealImage, label: 'Outmeal' },
-	{ image: wafflesImage, label: 'Waffles' },
-	{ image: cornflakesImage, label: 'Cornflakes' },
-	{ image: fruitsSaladImage, label: 'Fruits Salad' },
-	{ image: pancakesImage, label: 'Pancakes' },
-	{ image: breadAndTeaImage, label: 'Bread and Tea' },
-	{ image: outmealImage, label: 'Outmeal' },
-	{ image: wafflesImage, label: 'Waffles' },
-	{ image: cornflakesImage, label: 'Cornflakes' },
-	{ image: fruitsSaladImage, label: 'Fruits Salad' },
-	{ image: pancakesImage, label: 'Pancakes' },
-	{ image: breadAndTeaImage, label: 'Bread and Tea' },
+	{ id: '1', image: outmealImage, label: 'Outmeal' },
+	{ id: '2', image: wafflesImage, label: 'Waffles' },
+	{ id: '3', image: cornflakesImage, label: 'Cornflakes' },
+	{ id: '4', image: fruitsSaladImage, label: 'Fruits Salad' },
+	{ id: '5', image: pancakesImage, label: 'Pancakes' },
+	{ id: '6', image: breadAndTeaImage, label: 'Bread and Tea' },
+	{ id: '7', image: outmealImage, label: 'Outmeal' },
+	{ id: '8', image: wafflesImage, label: 'Waffles' },
+	{ id: '9', image: cornflakesImage, label: 'Cornflakes' },
+	{ id: '10', image: fruitsSaladImage, label: 'Fruits Salad' },
+	{ id: '11', image: pancakesImage, label: 'Pancakes' },
+	{ id: '12', image: breadAndTeaImage, label: 'Bread and Tea' },
 ]
